@@ -1,0 +1,72 @@
+/*
+filename: lab04.css
+author: Trần Hồng Vy Ái
+created: 09/10/2026
+last modified: 09/10/2026
+description: lab04.html
+*/
+/* Style all h1 headings with purple, larger and bold text */
+h1 {
+    color: purple;
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Universal selector: set the default font and text colour for all elements */
+* {
+    font-family: calibri, sans-serif;
+    color: #2F4F4F;
+}
+/* Style h2 headings with teal colour, bold text and a larger font size */
+h2 {
+    color: rgb(0,128,128);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+/* Group selector: make aside and footer text italic */
+aside, footer {
+    font-style: italic;
+}
+/* Group selector: use Arial for all h1, h2 and h3 headings */
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+/* Add a black border to the table and all header and data cells */
+table, th, td {
+    border: 1px solid black;
+}
+/* ID selector: centre the text inside the Images heading */
+#images {
+    text-align: center;
+}
+/* ID selector: change the specific Headings subheading to red */
+#heading-title {
+    color: red;
+}
+/* Class selector: highlight special characters in dark orange and bold */
+.special {
+    color: darkorange;
+    font-weight: bold;
+}
+/* Class selector: align the Jan and Feb row headings to the right */
+.month {
+    text-align: right;
+}
+/* Descendant selector: style links inside the navigation */
+nav a {
+    text-decoration: none;
+    padding: 0.2em 0.6em;
+    border: 4px solid #ccc;
+}
+/* Descendant selector: use square bullets for unordered lists inside ordered lists */
+ol ul {
+    list-style-type: square;
+}
+/* Pseudo-class: hide the aside when the mouse hovers over it */
+aside:hover {
+    display: none;
+}
+/* Pseudo-class: change the navigation link background and border on hover */s
+nav a:hover {
+    background-color: lightblue;
+    border-color: darkblue;
+}
