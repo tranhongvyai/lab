@@ -65,7 +65,7 @@ ol ul {
 aside:hover {
     display: none;
 }
-/* Pseudo-class: change the navigation link background and border on hover */s
+/* Pseudo-class: change the navigation link background and border on hover */
 nav a:hover {
     background-color: lightblue;
     border-color: darkblue;
