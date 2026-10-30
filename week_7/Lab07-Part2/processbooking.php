@@ -9,21 +9,21 @@
     <?php
     //Checking First name 
         if (empty($_POST['firstname'])) {
-            echo "First name is required";
+            echo "First name is required <br> " ;
         } else {
             echo "First name: " . htmlspecialchars($_POST['firstname']). "<br>";
         }
         
     //Checking Last name 
         if (empty($_POST['lastname'])) {
-            echo "Last name is required";
+            echo "Last name is required <br>";
         } else {
             echo "Last name: " . htmlspecialchars($_POST['lastname']) . "<br>";
         }
 
     //Checking Age 
         if (empty($_POST['age'])) {
-            echo "Age is required<br>";
+            echo "Age is required <br>";
         } elseif (filter_var($_POST['age'], FILTER_VALIDATE_INT) === false) {
             echo " Age must be a valid integer !!! <br>";
         } else {
@@ -51,18 +51,28 @@
 
     //Checking Booking 
     echo "<h2>Your Booking</h2>";
+    echo "Booking: ";
 
-        if (isset($_POST['accom'])) {
-            echo "Accommodation selected<br>";
-        }
+    $booking = [];
 
-        if (isset($_POST['4day'])) {
-            echo "4 Day Tour <br>";
-        }
+    if (isset($_POST['accom'])) {
+        $booking[] = "Accommodation";
+    }
 
-        if (isset($_POST['10day'])) {
-            echo "10 Day Tour <br>";
-        }
+    if (isset($_POST['4day'])) {
+        $booking[] = "4 Day Tour";
+    }
+
+    if (isset($_POST['10day'])) {
+        $booking[] = "10 Day Tour";
+    }
+
+    if (!empty($booking)) {
+        echo implode(", ", $booking) . "<br>";
+    } else {
+        echo "No booking selected<br>";
+    }
+    
     //Cheking food
         $food = $_POST['food'];
 
