@@ -1,3 +1,6 @@
+* {
+    box-sizing: content-box;
+}
 .menu{
     display:inline-block;
 }
@@ -40,11 +43,13 @@ table {
     margin: auto;
 }
 #tables{
-    float:right;
+    /* clear:both; */
+    float:left;
 }
+
+
 #hyperlinks{
-    clear:both;
-    float: left
+    float:right;
 }
 #images{
     float:right;
